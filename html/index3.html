@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 디스트럭처링 Destructuring (비구조화, 파괴)
+        const arr = [1, 2, 3];
+        // const a = arr[0];
+        // const b = arr[1];
+        // const c = arr[2];
+        const [a, b, c] = arr;
+        const [x, , z] = arr;
+        console.log(x,z);
+        
+        const [a1, b1, c1 = 5, d1 = 4] = arr;
+        // console.log(a1, b1, c1, d1);
+
+        const [x1, ...y1] = arr; //rest
+        console.log(x1, y1);
+
+        const obj = {
+            name: 'Smith',
+            age: 25
+        }
+        const {age, name} = obj;
+        console.log(name, age);
+        // const n = obj.name;
+        // const ag = obj.age; 
+
+        function myPrint(arr) {
+            const p = document.createElement('p');
+            p.innerHTML = arr;
+            document.body.appendChild(p);
+            console.log(arr);
+        }
+    </script>
+</body>
+</html>

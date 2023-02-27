@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const a = [1, 2, 3, 4, 5];
+        const b = [a, 6, 7, 8, 9, 10]; // [[1, 2, 3, 4, 5]],6, 7, 8, 9]
+        const c = [...a, 6, 7, 8, 9]; // [1, 2, 3, 4, 5, 6, 7, 8, 9]
+        // myPrint(b);
+        // console.log(a);
+        // console.log(b);
+
+        const d = [...a]; // [...a] = [1, 2, 3, 4, 5]
+        d[0] = 100;
+        myPrint(d);
+        myPrint(a);
+
+        // const 문자열 = 'student';
+        // myPrint(문자열[1]);
+        // const output = [...문자열];
+        // myPrint(output);
+        // console.log(output);
+        // ... spread : 펼친다
+        function myPrint(arr) {
+            const p = document.createElement('p');
+            p.innerHTML = arr;
+            document.body.appendChild(p);
+        }
+    </script>
+</body>
+
+</html>
